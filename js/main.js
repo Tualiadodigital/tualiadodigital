@@ -115,75 +115,16 @@ document.addEventListener('DOMContentLoaded', function () {
     const contactForm = document.getElementById('contactForm');
 
     if (contactForm) {
-        contactForm.addEventListener('submit', async function (e) {
-            e.preventDefault();
-
-            // 1. Get Values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
+        contactForm.addEventListener('submit', function (e) {
             const button = contactForm.querySelector('button[type="submit"]');
             const originalText = button.textContent;
 
-            // 2. Show Loading State
+            // Show Loading State
             button.disabled = true;
             button.textContent = 'Enviando...';
 
-            try {
-                // 3. Send to Formspree
-                const formData = new FormData(contactForm);
-                const response = await fetch(contactForm.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
-
-                if (response.ok) {
-                    // Success
-                    console.log('✅ Formulario enviado con éxito');
-
-                    // UI Feedback
-                    button.textContent = '¡Mensaje Enviado! ✓';
-                    button.style.backgroundColor = '#10B981'; // Success Green
-                    button.style.borderColor = '#10B981';
-
-                    // Reset Form
-                    contactForm.reset();
-
-                    // Alert (Simple feedback)
-                    alert(`¡Gracias ${name}! He recibido tu solicitud. Te escribiré a ${email} en menos de 24 horas.`);
-
-                    // Reset Button after delay
-                    setTimeout(() => {
-                        button.disabled = false;
-                        button.textContent = originalText;
-                        button.style.backgroundColor = ''; // Reset to CSS default
-                        button.style.borderColor = '';
-                    }, 5000);
-                } else {
-                    // Error from Formspree
-                    throw new Error('Error al enviar el formulario');
-                }
-
-            } catch (error) {
-                // Error handling
-                console.error('❌ Error al enviar:', error);
-
-                button.textContent = '❌ Error al enviar';
-                button.style.backgroundColor = '#EF4444'; // Error Red
-                button.style.borderColor = '#EF4444';
-
-                alert('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo o contáctame directamente por email o WhatsApp.');
-
-                // Reset Button after delay
-                setTimeout(() => {
-                    button.disabled = false;
-                    button.textContent = originalText;
-                    button.style.backgroundColor = '';
-                    button.style.borderColor = '';
-                }, 3000);
-            }
+            // Let the form submit naturally to Formspree
+            // No need to prevent default - let it work natively
         });
     }
 
