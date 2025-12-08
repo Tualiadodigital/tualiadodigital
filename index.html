@@ -972,8 +972,12 @@
                 </div>
 
                 <div class="contact-form-container">
-                    <form class="contact-form" id="contactForm" action="https://formspree.io/info@tualiadodigital.tech"
-                        method="POST">
+                    <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                        <!-- Web3Forms Configuration -->
+                        <input type="hidden" name="access_key" value="8cfdff14-8486-4672-97f1-42099859567f">
+                        <input type="hidden" name="subject" value="Nuevo mensaje desde Tu Aliado Digital">
+                        <input type="hidden" name="redirect" value="https://tualiadodigital.tech/#contacto">
+
                         <div class="form-group">
                             <label for="name">Tu nombre *</label>
                             <input type="text" id="name" name="name" required placeholder="Ej: María García">
