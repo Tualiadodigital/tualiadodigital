@@ -6,7 +6,46 @@
 document.addEventListener('DOMContentLoaded', function () {
 
     // ============================================
-    // 1. Smooth Scroll for Anchor Links
+    // 1. Mobile Menu Toggle
+    // ============================================
+    const navbarToggle = document.getElementById('navbarToggle');
+    const navbarMenu = document.getElementById('navbarMenu');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    if (navbarToggle && navbarMenu) {
+        // Toggle menu on button click
+        navbarToggle.addEventListener('click', function () {
+            const isActive = navbarToggle.classList.toggle('active');
+            navbarMenu.classList.toggle('active');
+            document.body.style.overflow = isActive ? 'hidden' : '';
+            navbarToggle.setAttribute('aria-expanded', isActive);
+        });
+
+        // Close menu when clicking on a link
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                navbarToggle.classList.remove('active');
+                navbarMenu.classList.remove('active');
+                document.body.style.overflow = '';
+                navbarToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function (event) {
+            if (!navbarMenu.contains(event.target) &&
+                !navbarToggle.contains(event.target) &&
+                navbarMenu.classList.contains('active')) {
+                navbarToggle.classList.remove('active');
+                navbarMenu.classList.remove('active');
+                document.body.style.overflow = '';
+                navbarToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+
+    // ============================================
+    // 2. Smooth Scroll for Anchor Links
     // ============================================
     const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
 
@@ -33,9 +72,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // ============================================
-    // 2. Scroll Reveal Animation
+    // 3. Scroll Reveal Animation
     // ============================================
-    const revealElements = document.querySelectorAll('.empathy-card, .pricing-card, .testimonial-card');
+    const revealElements = document.querySelectorAll('.benefit-card, .service-card, .portfolio-item, .pricing-card-modern, .faq-item-modern');
 
     // Add scroll-reveal class to elements
     revealElements.forEach(el => {
@@ -129,7 +168,121 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // ============================================
-    // 7. Console Art (Easter Egg)
+    // 7. Google Tag Manager Events
+    // ============================================
+
+    // Initialize dataLayer
+    window.dataLayer = window.dataLayer || [];
+
+    // Track CTA clicks
+    document.querySelectorAll('.btn-primary, .btn-primary-large, .btn-primary-full').forEach(btn => {
+        btn.addEventListener('click', function (e) {
+            const targetHref = this.getAttribute('href');
+            // Only track internal anchors, not external links
+            if (targetHref && targetHref.startsWith('#')) {
+                window.dataLayer.push({
+                    'event': 'cta_click',
+                    'cta_text': this.textContent.trim(),
+                    'cta_location': this.closest('section')?.id || 'unknown',
+                    'cta_target': targetHref
+                });
+            }
+        });
+    });
+
+    // Track form submission
+    const contactFormGTM = document.getElementById('contactForm');
+    if (contactFormGTM) {
+        contactFormGTM.addEventListener('submit', function () {
+            window.dataLayer.push({
+                'event': 'form_submit',
+                'form_name': 'contact_form',
+                'form_type': document.getElementById('project-type')?.value || 'unknown'
+            });
+        });
+    }
+
+    // Track scroll depth
+    let scrollTracked = { 25: false, 50: false, 75: false, 100: false };
+    let scrollTimeout;
+
+    window.addEventListener('scroll', function () {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+            const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+
+            Object.keys(scrollTracked).forEach(threshold => {
+                if (scrollPercent >= parseInt(threshold) && !scrollTracked[threshold]) {
+                    scrollTracked[threshold] = true;
+                    window.dataLayer.push({
+                        'event': 'scroll_depth',
+                        'scroll_percentage': threshold
+                    });
+                }
+            });
+        }, 100);
+    });
+
+    // Track portfolio project views
+    document.querySelectorAll('.portfolio-item .btn, .portfolio-item a').forEach(link => {
+        link.addEventListener('click', function () {
+            const projectTitle = this.closest('.portfolio-item')?.querySelector('.portfolio-title')?.textContent.trim();
+            if (projectTitle) {
+                window.dataLayer.push({
+                    'event': 'portfolio_click',
+                    'project_name': projectTitle
+                });
+            }
+        });
+    });
+
+    // ============================================
+    // 8. Lazy Loading Mejorado
+    // ============================================
+
+    // Añadir clases de loading a imágenes del portfolio
+    const portfolioImages = document.querySelectorAll('.portfolio-image img');
+
+    portfolioImages.forEach(img => {
+        // Solo aplicar lazy loading avanzado a imágenes que aún no han cargado
+        if (!img.complete) {
+            img.classList.add('img-lazy', 'loading');
+
+            img.addEventListener('load', function () {
+                this.classList.remove('loading');
+                this.classList.add('loaded');
+            });
+        }
+    });
+
+    // IntersectionObserver para lazy loading con pre-carga
+    const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+
+                // Track image view in GTM
+                const projectTitle = img.closest('.portfolio-item')?.querySelector('.portfolio-title')?.textContent.trim();
+                if (projectTitle) {
+                    window.dataLayer.push({
+                        'event': 'portfolio_image_view',
+                        'project_name': projectTitle
+                    });
+                }
+
+                imageObserver.unobserve(img);
+            }
+        });
+    }, {
+        rootMargin: '100px' // Empezar a rastrear 100px antes
+    });
+
+    portfolioImages.forEach(img => {
+        imageObserver.observe(img);
+    });
+
+    // ============================================
+    // 9. Console Art (Easter Egg)
     // ============================================
     console.log('%c👋 Hola, developer curioso!', 'font-size: 20px; font-weight: bold; color: #1E3A8A;');
     console.log('%c¿Te gusta lo que ves? Trabajemos juntos.', 'font-size: 14px; color: #6B7280;');

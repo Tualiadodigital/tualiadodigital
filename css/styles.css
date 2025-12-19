@@ -142,6 +142,21 @@ img {
     display: block;
 }
 
+/* Lazy Loading con Blur Effect */
+.img-lazy {
+    transition: filter 0.5s ease, opacity 0.5s ease;
+}
+
+.img-lazy.loading {
+    filter: blur(20px);
+    opacity: 0.7;
+}
+
+.img-lazy.loaded {
+    filter: blur(0);
+    opacity: 1;
+}
+
 .container {
     width: 100%;
     max-width: 1200px;
@@ -1901,4 +1916,185 @@ section {
 .btn-primary-small:hover {
     box-shadow: var(--shadow-md);
     transform: translateY(-1px);
+}
+
+/* ============================================
+   Navbar Mobile - Hamburger Menu
+   ============================================ */
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1001;
+}
+
+.hamburger-line {
+    width: 25px;
+    height: 3px;
+    background: var(--primary);
+    border-radius: 3px;
+    transition: var(--transition);
+}
+
+/* Animación cuando el menú está abierto */
+.navbar-toggle.active .hamburger-line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.navbar-toggle.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-toggle.active .hamburger-line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ============================================
+   Responsive Media Queries
+   ============================================ */
+
+/* Tablet and Mobile */
+@media (max-width: 768px) {
+
+    /* Mobile Navigation */
+    .navbar-toggle {
+        display: flex;
+    }
+
+    .navbar-menu {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 280px;
+        height: calc(100vh - 70px);
+        background: var(--primary);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: var(--space-8);
+        gap: var(--space-6);
+        transition: right 0.3s ease;
+        box-shadow: var(--shadow-xl);
+        z-index: 1000;
+    }
+
+    .navbar-menu.active {
+        right: 0;
+    }
+
+    .navbar-menu .nav-link {
+        width: 100%;
+        font-size: var(--font-size-lg);
+        padding: var(--space-3) 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        color: var(--white);
+    }
+
+    .navbar-menu .nav-link:hover {
+        color: var(--accent-orange);
+    }
+
+    .navbar-menu .btn {
+        width: 100%;
+        margin-top: var(--space-4);
+    }
+
+    /* Hero Responsive */
+    .hero-modern {
+        min-height: auto !important;
+        padding: var(--space-12) 0 !important;
+    }
+
+    .hero-container-centered {
+        text-align: center;
+    }
+
+    .hero-content-centered {
+        max-width: 100%;
+    }
+
+    .hero-title-centered {
+        font-size: var(--font-size-4xl) !important;
+    }
+
+    .hero-ctas-centered {
+        flex-direction: column;
+        gap: var(--space-3);
+    }
+
+    .hero-ctas-centered .btn {
+        width: 100%;
+    }
+
+    .hero-stats-integrated {
+        flex-direction: column;
+        gap: var(--space-4);
+    }
+
+    .stat-divider-inline {
+        display: none;
+    }
+
+    /* Typography - Remove justify on mobile */
+    p {
+        text-align: left !important;
+    }
+
+    /* About Section Responsive */
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+
+    .about-highlights-inline {
+        flex-direction: column;
+        gap: var(--space-4);
+    }
+
+    /* Portfolio Grid */
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-item.featured {
+        grid-column: span 1;
+    }
+
+    /* Pricing Grid */
+    .pricing-grid-modern {
+        grid-template-columns: 1fr;
+    }
+
+    /* Services Grid */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Benefits Grid */
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Large Mobile */
+@media (max-width: 480px) {
+    .navbar-menu {
+        width: 100%;
+        right: -100%;
+    }
+
+    .navbar-menu.active {
+        right: 0;
+    }
+
+    .hero-title-centered {
+        font-size: var(--font-size-3xl) !important;
+    }
+
+    .section-title {
+        font-size: var(--font-size-3xl);
+    }
 }

@@ -14,26 +14,6 @@
         content="diseño web soria, paginas web baratas soria, desarrollador web soria, diseño web freelance, web corporativa 300 euros, marketing digital soria">
     <meta name="author" content="Elías Martín Kabbabe - Tu Aliado Digital">
     <link rel="canonical" href="https://tualiadodigital.tech/">
-    <meta name="robots" content="index, follow">
-    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
-    <meta name="theme-color" content="#1E3A8A">
-
-    <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-PLRX3WCB');</script>
-    <!-- End Google Tag Manager -->
-
-    <!-- Favicon - Iconos para búsquedas y pestañas -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
-    <link rel="shortcut icon" href="/favicon.png">
 
     <!-- Open Graph / Social (WhatsApp, Facebook, LinkedIn) -->
     <meta property="og:type" content="business.business">
@@ -96,31 +76,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
-    <!-- Stylesheet - Minified for Production -->
-    <link rel="stylesheet" href="css/styles.min.css">
-    <!-- Development version: <link rel="stylesheet" href="css/styles.css"> -->
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PLRX3WCB" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
 
     <!-- Navbar Sticky -->
     <nav class="navbar">
         <div class="container navbar-container">
             <a href="#" class="navbar-logo">Tu Aliado Digital</a>
-
-            <!-- Botón hamburguesa para móvil -->
-            <button class="navbar-toggle" id="navbarToggle" aria-label="Abrir menú de navegación" aria-expanded="false">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
-
-            <div class="navbar-links navbar-menu" id="navbarMenu">
+            <div class="navbar-links">
                 <a href="#beneficios" class="nav-link">Beneficios</a>
                 <a href="#servicios" class="nav-link">Servicios</a>
                 <a href="#portfolio" class="nav-link">Portfolio</a>
@@ -235,7 +202,7 @@
 
             <div class="about-content">
                 <div class="about-avatar">
-                    <img src="assets/profile-photo.jpg"
+                    <img src="assets/avatar-professional.png"
                         alt="Elías Martín Kabbabe - Desarrollador Web Freelance en Soria especializado en diseño web profesional para pequeños negocios"
                         class="avatar-image" loading="lazy">
                     <div class="avatar-badge">
@@ -546,154 +513,6 @@
                     </div>
                 </div>
 
-                <!-- Proyecto 4: Estudio de Arquitectura -->
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <img src="assets/portfolio-arquitectura.png"
-                            alt="Portfolio profesional para estudio de arquitectura - Galería de proyectos con diseño minimalista"
-                            loading="lazy">
-                        <div class="portfolio-overlay">
-                            <span class="btn btn-white-small" style="pointer-events: none;">
-                                Proyecto Demo
-                            </span>
-                        </div>
-                    </div>
-                    <div class="portfolio-info">
-                        <div class="portfolio-header">
-                            <div class="portfolio-tags">
-                                <span class="tag">Arquitectura</span>
-                                <span class="tag">Portfolio</span>
-                                <span class="tag">Proyecto Demo</span>
-                            </div>
-                        </div>
-                        <h3 class="portfolio-title">Estudio Arquitectura Moderna</h3>
-                        <p class="portfolio-description">
-                            Portfolio minimalista para estudio de arquitectura. Galería con filtros por categoría
-                            (residencial, comercial, urbano), lightbox para vista detallada y sección de equipo.
-                            <strong>Diseño limpio enfocado en destacar los proyectos.</strong>
-                        </p>
-                        <div class="portfolio-results">
-                            <div class="result-item">
-                                <span class="result-icon">🎨</span>
-                                <span class="result-text">Diseño minimalista</span>
-                            </div>
-                            <div class="result-item">
-                                <span class="result-icon">🖼️</span>
-                                <span class="result-text">Galería optimizada</span>
-                            </div>
-                            <div class="result-item">
-                                <span class="result-icon">⚡</span>
-                                <span class="result-text">Carga ultrarrápida</span>
-                            </div>
-                        </div>
-                        <div class="portfolio-tech">
-                            <span>HTML5</span>
-                            <span>CSS Grid</span>
-                            <span>JavaScript</span>
-                            <span>Lightbox</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Proyecto 5: Clínica Dental -->
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <img src="assets/portfolio-clinica.png"
-                            alt="Web corporativa para clínica dental con sistema de citas online" loading="lazy">
-                        <div class="portfolio-overlay">
-                            <span class="btn btn-white-small" style="pointer-events: none;">
-                                Proyecto Demo
-                            </span>
-                        </div>
-                    </div>
-                    <div class="portfolio-info">
-                        <div class="portfolio-header">
-                            <div class="portfolio-tags">
-                                <span class="tag">Salud</span>
-                                <span class="tag">Web Corporativa</span>
-                                <span class="tag">Proyecto Demo</span>
-                            </div>
-                        </div>
-                        <h3 class="portfolio-title">Clínica Dental Sonríe</h3>
-                        <p class="portfolio-description">
-                            Web completa para clínica dental con sistema de reserva de citas online integrado.
-                            Incluye sección de servicios, equipo médico, antes/después, blog y formularios.
-                            <strong>Diseño profesional que transmite confianza.</strong>
-                        </p>
-                        <div class="portfolio-results">
-                            <div class="result-item">
-                                <span class="result-icon">📅</span>
-                                <span class="result-text">Citas online</span>
-                            </div>
-                            <div class="result-item">
-                                <span class="result-icon">💼</span>
-                                <span class="result-text">Corporativo</span>
-                            </div>
-                            <div class="result-item">
-                                <span class="result-icon">📱</span>
-                                <span class="result-text">100% Responsive</span>
-                            </div>
-                        </div>
-                        <div class="portfolio-tech">
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>JavaScript</span>
-                            <span>Calendly API</span>
-                            <span>Blog</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Proyecto 6: E-commerce Moda -->
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <img src="assets/portfolio-ecommerce.png"
-                            alt="Tienda online de moda con Shopify - Carrito de compras y pasarela de pago integrada"
-                            loading="lazy">
-                        <div class="portfolio-overlay">
-                            <span class="btn btn-white-small" style="pointer-events: none;">
-                                Proyecto Demo
-                            </span>
-                        </div>
-                    </div>
-                    <div class="portfolio-info">
-                        <div class="portfolio-header">
-                            <div class="portfolio-tags">
-                                <span class="tag">E-commerce</span>
-                                <span class="tag">Shopify</span>
-                                <span class="tag">Proyecto Demo</span>
-                            </div>
-                        </div>
-                        <h3 class="portfolio-title">Moda Urbana Store</h3>
-                        <p class="portfolio-description">
-                            Tienda online completa para marca de ropa urbana. Catálogo con filtros, carrito de compras,
-                            checkout optimizado, pasarela de pago (Stripe/PayPal) y panel de administración.
-                            <strong>Conversión optimizada para ventas.</strong>
-                        </p>
-                        <div class="portfolio-results">
-                            <div class="result-item">
-                                <span class="result-icon">🛒</span>
-                                <span class="result-text">Carrito avanzado</span>
-                            </div>
-                            <div class="result-item">
-                                <span class="result-icon">💳</span>
-                                <span class="result-text">Pago seguro</span>
-                            </div>
-                            <div class="result-item">
-                                <span class="result-icon">📊</span>
-                                <span class="result-text">Analytics</span>
-                            </div>
-                        </div>
-                        <div class="portfolio-tech">
-                            <span>Shopify</span>
-                            <span>Liquid</span>
-                            <span>Stripe</span>
-                            <span>PayPal</span>
-                            <span>SEO</span>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- CTA Card -->
                 <div class="portfolio-item cta-card">
                     <div class="portfolio-cta-content">
@@ -997,131 +816,6 @@
         </div>
     </section>
 
-
-    <!-- Contacto con Formulario - NUEVA -->
-    <section class="contact-section" id="contacto">
-        <div class="container">
-            <div class="section-header centered">
-                <span class="section-tag">Contacto</span>
-                <h2 class="section-title">¿Listo para empezar tu proyecto?</h2>
-                <p class="section-subtitle">Cuéntame qué necesitas y te respondo en menos de 24 horas con un presupuesto
-                    claro y honesto.</p>
-            </div>
-
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Hablemos de tu proyecto</h3>
-                    <p>Prefiero escuchar antes que hablar. Cuéntame sobre tu negocio, tus objetivos y qué esperas de tu
-                        web.
-                        Te daré una propuesta personalizada y sin compromiso.</p>
-
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <div class="contact-method-icon">📧</div>
-                            <div class="contact-method-content">
-                                <h4>Email</h4>
-                                <a href="mailto:info@tualiadodigital.tech">info@tualiadodigital.tech</a>
-                                <p class="contact-method-note">Respuesta en < 24h</p>
-                            </div>
-                        </div>
-
-                        <div class="contact-method">
-                            <div class="contact-method-icon">💬</div>
-                            <div class="contact-method-content">
-                                <h4>WhatsApp</h4>
-                                <a href="https://wa.me/34623281393">+34 623 281 393</a>
-                                <p class="contact-method-note">Lun-Vie: 9h - 18h</p>
-                            </div>
-                        </div>
-
-                        <div class="contact-method">
-                            <div class="contact-method-icon">📍</div>
-                            <div class="contact-method-content">
-                                <h4>Ubicación</h4>
-                                <p>Soria, España 🇪🇸</p>
-                                <p class="contact-method-note">Trabajo en toda España (remoto)</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="contact-guarantee">
-                        <div class="guarantee-badge">
-                            <span class="guarantee-check">✓</span>
-                            <span>Respuesta garantizada en 24h</span>
-                        </div>
-                        <div class="guarantee-badge">
-                            <span class="guarantee-check">✓</span>
-                            <span>Presupuesto sin compromiso</span>
-                        </div>
-                        <div class="guarantee-badge">
-                            <span class="guarantee-check">✓</span>
-                            <span>Primera consulta 100% gratis</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contact-form-container">
-                    <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-                        <!-- Web3Forms Configuration -->
-                        <input type="hidden" name="access_key" value="8cfdff14-8486-4672-97f1-42099859567f">
-                        <input type="hidden" name="subject" value="Nuevo mensaje desde Tu Aliado Digital">
-                        <input type="hidden" name="redirect" value="gracias.html">
-
-                        <div class="form-group">
-                            <label for="name">Tu nombre *</label>
-                            <input type="text" id="name" name="name" required placeholder="Ej: María García">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" required placeholder="tu@email.com">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="phone">Teléfono (opcional)</label>
-                            <input type="tel" id="phone" name="phone" placeholder="+34 600 000 000">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="project-type">Tipo de proyecto *</label>
-                            <select id="project-type" name="project-type" required>
-                                <option value="">Selecciona una opción...</option>
-                                <option value="landing">Landing Page</option>
-                                <option value="corporate">Web Corporativa</option>
-                                <option value="ecommerce">Tienda Online</option>
-                                <option value="restaurant">Web para Restaurante</option>
-                                <option value="portfolio">Portfolio</option>
-                                <option value="booking">Sistema de Reservas</option>
-                                <option value="other">Otro (especificar en mensaje)</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Cuéntame sobre tu proyecto *</label>
-                            <textarea id="message" name="message" rows="5" required
-                                placeholder="Describe brevemente qué necesitas, cuáles son tus objetivos y cualquier detalle que consideres importante..."></textarea>
-                        </div>
-
-                        <div class="form-group checkbox-group">
-                            <label class="checkbox-label">
-                                <input type="checkbox" id="privacy" name="privacy" required>
-                                <span>He leído y acepto la <a href="politica-privacidad.html" class="link-inline"
-                                        target="_blank" rel="noopener noreferrer">política de
-                                        privacidad</a></span>
-                            </label>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary-full btn-large">
-                            Enviar Solicitud →
-                        </button>
-
-                        <p class="form-note">* Campos obligatorios. Tus datos están seguros y no serán compartidos con
-                            terceros.</p>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- FAQ - MEJORADA -->
     <section class="faq" id="faq">
         <div class="container">
@@ -1218,6 +912,131 @@
             <div class="faq-cta">
                 <p>¿Tienes más preguntas? <a href="#contacto" class="link-bold">Escríbeme ahora</a> y te respondo en
                     menos de 24h.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto con Formulario - NUEVA -->
+    <section class="contact-section" id="contacto">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-tag">Contacto</span>
+                <h2 class="section-title">¿Listo para empezar tu proyecto?</h2>
+                <p class="section-subtitle">Cuéntame qué necesitas y te respondo en menos de 24 horas con un presupuesto
+                    claro y honesto.</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Hablemos de tu proyecto</h3>
+                    <p>Prefiero escuchar antes que hablar. Cuéntame sobre tu negocio, tus objetivos y qué esperas de tu
+                        web.
+                        Te daré una propuesta personalizada y sin compromiso.</p>
+
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-method-icon">📧</div>
+                            <div class="contact-method-content">
+                                <h4>Email</h4>
+                                <a href="mailto:info@tualiadodigital.tech">info@tualiadodigital.tech</a>
+                                <p class="contact-method-note">Respuesta en < 24h</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="contact-method-icon">💬</div>
+                            <div class="contact-method-content">
+                                <h4>WhatsApp</h4>
+                                <a href="https://wa.me/34623281393">+34 623 281 393</a>
+                                <p class="contact-method-note">Lun-Vie: 9h - 18h</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="contact-method-icon">📍</div>
+                            <div class="contact-method-content">
+                                <h4>Ubicación</h4>
+                                <p>Soria, España 🇪🇸</p>
+                                <p class="contact-method-note">Trabajo en toda España (remoto)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-guarantee">
+                        <div class="guarantee-badge">
+                            <span class="guarantee-check">✓</span>
+                            <span>Respuesta garantizada en 24h</span>
+                        </div>
+                        <div class="guarantee-badge">
+                            <span class="guarantee-check">✓</span>
+                            <span>Presupuesto sin compromiso</span>
+                        </div>
+                        <div class="guarantee-badge">
+                            <span class="guarantee-check">✓</span>
+                            <span>Primera consulta 100% gratis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                        <!-- Web3Forms Configuration -->
+                        <input type="hidden" name="access_key" value="8cfdff14-8486-4672-97f1-42099859567f">
+                        <input type="hidden" name="subject" value="Nuevo mensaje desde Tu Aliado Digital">
+                        <input type="hidden" name="redirect" value="https://tualiadodigital.tech/#contacto">
+
+                        <div class="form-group">
+                            <label for="name">Tu nombre *</label>
+                            <input type="text" id="name" name="name" required placeholder="Ej: María García">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Teléfono (opcional)</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+34 600 000 000">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="project-type">Tipo de proyecto *</label>
+                            <select id="project-type" name="project-type" required>
+                                <option value="">Selecciona una opción...</option>
+                                <option value="landing">Landing Page</option>
+                                <option value="corporate">Web Corporativa</option>
+                                <option value="ecommerce">Tienda Online</option>
+                                <option value="restaurant">Web para Restaurante</option>
+                                <option value="portfolio">Portfolio</option>
+                                <option value="booking">Sistema de Reservas</option>
+                                <option value="other">Otro (especificar en mensaje)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Cuéntame sobre tu proyecto *</label>
+                            <textarea id="message" name="message" rows="5" required
+                                placeholder="Describe brevemente qué necesitas, cuáles son tus objetivos y cualquier detalle que consideres importante..."></textarea>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="privacy" name="privacy" required>
+                                <span>He leído y acepto la <a href="politica-privacidad.html" class="link-inline"
+                                        target="_blank" rel="noopener noreferrer">política de
+                                        privacidad</a></span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary-full btn-large">
+                            Enviar Solicitud →
+                        </button>
+
+                        <p class="form-note">* Campos obligatorios. Tus datos están seguros y no serán compartidos con
+                            terceros.</p>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -1325,9 +1144,7 @@
     </svg>
 
     <!-- JavaScript -->
-    <!-- JavaScript - Minified for Production -->
-    <script src="js/main.min.js"></script>
-    <!-- Development version: <script src="js/main.js"></script> -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>
